@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
         <ul>
@@ -22,24 +24,38 @@
     </nav>
 
     <p>This is the home page</p>
-    
+
     <main>
-        <img src="rock.png" alt="">
-        <img src="paper.png" alt="">
-        <img src="scissor.png" alt="">
-        
+        <div class="playerOne">
+            <img src="rock.png" alt="rock"  id="image1" class="player2Choice  hidden">
+            <br>
+            <img src="paper.png" alt="paper" id="image2" class="player2Choice  hidden">
+            <br>
+            <img src="scissor.png" alt="scissor"  id="image3" class="player2Choice  hidden">
+
+        </div>
+
+        <div class="playerTwo">
+            <img src="rock.png" alt="rock" id="player1rock" class="player1Choice hidden">
+            <br>
+            <img src="paper.png" alt="paper"  id="player1paper" class="player1Choice  hidden">
+            <br>
+            <img src="scissor.png" alt="scissor" id="player1sicssor" class="player1Choice  hidden">
+
+        </div>
     </main>
-    
-    <footer>
-        <input type="submit" value="">
-        <input type="submit" value="">
-        <input type="submit" value="">
-    </footer>
-    
-    
-    
+
+    <div id="buttons">
+        <input type="submit" value="Rock" id="rockBtn" class="btn">
+        <input type="submit" value="Paper"  id="paperBtn" class="btn">
+        <input type="submit" value="Scissor" id="scissorBtn" class="btn">
+    </div>
+
+
+
     <script src="script.js">
     </script>
-    <script src="canvas.js"></script>
+    
 </body>
+
 </html>

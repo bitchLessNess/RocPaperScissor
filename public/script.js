@@ -1,64 +1,98 @@
-let input = document.getElementById("inputField");
-        
-        
-        
-        let comp = Math.floor(Math.random()*3);
-        let playerField = document.getElementById("player");
-        let compField = document.getElementById("comp");
-        let result = document.getElementById("result")
-        let t0 = "rock";
-        let t1 = "paper"
-        let t2 = "scissor"
-        const loading = async()=>{
-            
-        }
-        document.getElementById("buton").addEventListener('click', ()=>{
-            let player = input.value.toLowerCase()
-            let play;   
-            console.log(player)
-            if(player == "rock" || player== "scissor" ||player == "paper"){
-                switch(player){
-                case "rock": playerField.innerText = "player got- " + t0, play = t0;
-                break;
-                case "paper": playerField.innerText = "player got- " +t1, play = t1;
-                break;
-                case "scissor": playerField.innerText = "player got- " +t2, play = t2;
-            }
+const rock = document.getElementById("rockBtn")
+const paper = document.getElementById("paperBtn")
+const scissor = document.getElementById("scissorBtn")
+const buttons = document.getElementById("buttons")
 
-             switch(comp){
-                case 0: compField.innerText = "Computer got- " +t0, comp = to ;
-                break;
-                case 1: compField.innerText = "Computer got- " +t1, comp = t1;
-                break;
-                case 2: compField.innerText = "Computer got -"+t2, comp = t2;
-            }
-           
-            if(play == t0 && comp == t1){
-                result.innerText = "Computer won"
-            }
-            else if(play == t1 && comp == t0){
-                result.innerText = "Player won"
-            }
-            else if(play == t0 && comp == t2){
-                result.innerText = "Player won"
-            }
-            else if(play == t2 && comp == t0){
-                result.innerText = "Computer won"
-            }
-            else if(play == t1 && comp == t2){
-                result.innerText = "Computer won"
-            }
-            else if(play == t2 && comp == t0){
-                result.innerText = "Player won"
-            }
-            else{
-                result.innerText = "It's a Draw, Play Again"
-            }
-               
-            }
-            else{
-                result.innerText ="invalid Entry-"
-            }
-            // 0 = rock, 1 = paper, 2 = scissor
-        })
-      
+//creating the computer's choice
+let isClicked;
+
+
+function unhideComp() {
+    const compChoice = Math.floor(Math.random() * 3 + 1);
+    if (compChoice == 1) {
+        document.getElementById("image1").classList.remove("hidden")
+    }
+    else if (compChoice == 2) {
+        document.getElementById("image2").classList.remove("hidden")
+    }
+    else {
+        document.getElementById("image3").classList.remove("hidden")
+    }
+    setTimeout(() => {
+        if (compChoice == 1) {
+            document.getElementById("image1").classList.add("hidden")
+        }
+        else if (compChoice == 2) {
+            document.getElementById("image2").classList.add("hidden")
+        }
+        else {
+            document.getElementById("image3").classList.add("hidden")
+        }
+    }, 3000)
+}
+
+function unhidePlayer(isClicked) {
+
+    if (isClicked == "rock") {
+        document.getElementById("player1rock").classList.remove("hidden")
+    }
+    else if (isClicked == "paper") {
+        document.getElementById("player1paper").classList.remove("hidden")
+    }
+    else if (isClicked == "scissor") {
+        document.getElementById("player1sicssor").classList.remove("hidden")
+    }
+    setTimeout(() => {
+        if (isClicked == "rock") {
+            document.getElementById("player1rock").classList.add("hidden")
+        }
+        else if (isClicked == "paper") {
+            document.getElementById("player1paper").classList.add("hidden")
+        }
+        else if (isClicked == "scissor") {
+            document.getElementById("player1sicssor").classList.add("hidden")
+        }
+    }, 3000)
+}
+
+
+// hide button 
+function hideBtn() {
+    buttons.classList.add("hidden2");
+
+    setTimeout(()=>{
+        buttons.classList.remove("hidden2");
+    }, 3000)
+}
+
+// Rock : when the player chooses the rock button 
+rock.addEventListener('click', () => {
+    console.log("click")
+    isClicked = "rock";
+
+    unhideComp()
+    unhidePlayer(isClicked)
+    hideBtn()
+
+})
+
+// paper : when the player chooses the rock button 
+paper.addEventListener('click', () => {
+    console.log("click")
+    isClicked = "paper";
+
+    unhideComp()
+    unhidePlayer(isClicked)
+    hideBtn()
+
+})
+
+// scissor : when the player chooses the rock button 
+scissor.addEventListener('click', () => {
+    console.log("click scissor")
+    isClicked = "scissor";
+
+    unhideComp()
+    unhidePlayer(isClicked)
+    hideBtn()
+})
