@@ -13,7 +13,7 @@
         <h1>Rock Paper Sci...</h1>
         <ul>
             <a href="/">
-                <li>home</li>
+                <li>Home</li>
             </a>
             <a href="/about.html">
                 <li>About</li>
@@ -24,37 +24,55 @@
         </ul>
     </nav>
 
-   
 
-    <main>
-        <div class="playerOne">
-            <img src="rock.png" alt="rock"  id="image1" class="player2Choice  hidden">
-            <br>
-            <img src="paper.png" alt="paper" id="image2" class="player2Choice  hidden">
-            <br>
-            <img src="scissor.png" alt="scissor"  id="image3" class="player2Choice  hidden">
+    <div class="container">
+        <main  >
+            <div class="playerOne">
+                <img src="rock.png" alt="rock" id="image1" class="player2Choice  hidden">
+                <br>
+                <img src="paper.png" alt="paper" id="image2" class="player2Choice  hidden">
+                <br>
+                <img src="scissor.png" alt="scissor" id="image3" class="player2Choice  hidden">
 
+            </div>
+
+            <div id="result" class="result hidden">
+                <p id="resText">You won</p>
+            </div>
+
+            <div class="playerTwo">
+                <img src="rock.png" alt="rock" id="player1rock" class="player1Choice hidden">
+                <br>
+                <img src="paper.png" alt="paper" id="player1paper" class="player1Choice  hidden">
+                <br>
+                <img src="scissor.png" alt="scissor" id="player1sicssor" class="player1Choice  hidden">
+
+            </div>
+
+
+
+        </main>
+        <!-- Score Card   --------------------------------         -->
+        <div class="scoreCard hidden" id="scoreBoard">
+            <div class="scores">
+                <div class="comp">
+                    <label for="compScore">Computer</label>
+                    <p class="compScore">0</p>
+                </div>
+                <div class="player">
+                    <label for="playerScore">Player</label>
+                    <p class="playerScore">0</p>
+                </div>
+            </div>
+            <p id="finalResult">finalResult</p>
+            <input type="submit" value="Play Again" id="playAgain">
         </div>
+    </div>
 
-        <div id="result" class="result hidden">
-            <p id="resText">You won</p>
-        </div>
-
-        <div class="playerTwo">
-            <img src="rock.png" alt="rock" id="player1rock" class="player1Choice hidden">
-            <br>
-            <img src="paper.png" alt="paper"  id="player1paper" class="player1Choice  hidden">
-            <br>
-            <img src="scissor.png" alt="scissor" id="player1sicssor" class="player1Choice  hidden">
-
-        </div>
-
-
-    </main>
-
+    <!-- Buttons  ---------------------------------------------- -->
     <div id="buttons">
         <input type="submit" value="Rock" id="rockBtn" class="btn">
-        <input type="submit" value="Paper"  id="paperBtn" class="btn">
+        <input type="submit" value="Paper" id="paperBtn" class="btn">
         <input type="submit" value="Scissor" id="scissorBtn" class="btn">
     </div>
 
@@ -62,7 +80,7 @@
 
     <script src="script.js">
     </script>
-    
+
 </body>
 
 </html>

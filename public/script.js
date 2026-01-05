@@ -4,6 +4,14 @@ const scissor = document.getElementById("scissorBtn")
 const buttons = document.querySelectorAll(".btn")
 const result = document.getElementById("result");
 const resText = document.getElementById("resText")
+
+const scoreCard = document.getElementById("scoreBoard")
+
+let count = 0;
+
+
+
+
 //creating the computer's choice
 let isClicked;
 
