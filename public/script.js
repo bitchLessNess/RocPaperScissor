@@ -1,14 +1,27 @@
 const rock = document.getElementById("rockBtn")
 const paper = document.getElementById("paperBtn")
 const scissor = document.getElementById("scissorBtn")
-const buttons = document.getElementById("buttons")
-
+const buttons = document.querySelectorAll(".btn")
+const result = document.getElementById("result");
+const resText = document.getElementById("resText")
 //creating the computer's choice
 let isClicked;
 
+const res = () => {
+    setTimeout(() => {
+        result.classList.remove("hidden")
+    }, 3000);
+    setTimeout(() => {
+        result.classList.add("hidden")
+    }, 4000);
+
+}
+
+
+const compChoice = Math.floor(Math.random() * 3 + 1);
 
 function unhideComp() {
-    const compChoice = Math.floor(Math.random() * 3 + 1);
+
     if (compChoice == 1) {
         document.getElementById("image1").classList.remove("hidden")
     }
@@ -57,13 +70,30 @@ function unhidePlayer(isClicked) {
 
 
 // hide button 
-function hideBtn() {
-    buttons.classList.add("hidden2");
+// function hideBtn() {
+//   buttons.forEach(btn => {
+//     btn.classList.add("hidden2");
+//   });
 
-    setTimeout(()=>{
-        buttons.classList.remove("hidden2");
-    }, 3000)
-}
+//   // show after 5 seconds
+//   setTimeout(() => {
+//     buttons.forEach(btn => {
+//       btn.classList.remove("hidden2");
+//     });
+//   }, 5000);
+// }
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // hide all buttons
+    buttons.forEach(b => b.classList.add("hidden2"));
+
+    // show again after 5 seconds
+    setTimeout(() => {
+      buttons.forEach(b => b.classList.remove("hidden2"));
+    }, 5000);
+  });
+});
 
 // Rock : when the player chooses the rock button 
 rock.addEventListener('click', () => {
@@ -72,7 +102,11 @@ rock.addEventListener('click', () => {
 
     unhideComp()
     unhidePlayer(isClicked)
-    hideBtn()
+   
+    res()
+    if (compChoice === 1) { resText.innerText = "It's a Draw" }
+    else if (compChoice === 2) { resText.innerText = "You lost to paper" }
+    else { resText.innerText = "You Won!!" }
 
 })
 
@@ -83,7 +117,12 @@ paper.addEventListener('click', () => {
 
     unhideComp()
     unhidePlayer(isClicked)
-    hideBtn()
+   
+    res()
+    if (compChoice === 1) { resText.innerText = "You won!!" }
+    else if (compChoice === 2) { resText.innerText = "It's a Draw" }
+    else { resText.innerText = "You lost to Scissor" }
+
 
 })
 
@@ -94,5 +133,10 @@ scissor.addEventListener('click', () => {
 
     unhideComp()
     unhidePlayer(isClicked)
-    hideBtn()
+    
+    res()
+    if (compChoice === 1) { resText.innerText = "You Lost to Rock" }
+    else if (compChoice === 2) { resText.innerText = "You Won!!" }
+    else { resText.innerText = "It's a Draw" }
+
 })
