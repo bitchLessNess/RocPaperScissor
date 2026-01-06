@@ -90,6 +90,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+  
 
 }
 
@@ -98,6 +99,11 @@ main {
     height: 1.5rem;
     padding: 0.2rem;
     border-radius: 0.5rem;
+    background-image: linear-gradient(rgb(0, 255, 242), rgb(0, 170, 255));
+    font-weight: bold;
+    color: rgb(0, 0, 67);
+    border: 1px solid darkblue;
+   
 
 }
 

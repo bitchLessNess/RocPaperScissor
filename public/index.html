@@ -26,7 +26,7 @@
 
 
     <div class="container">
-        <main  >
+        <main id="main" >
             <div class="playerOne">
                 <img src="rock.png" alt="rock" id="image1" class="player2Choice  hidden">
                 <br>
@@ -57,11 +57,11 @@
             <div class="scores">
                 <div class="comp">
                     <label for="compScore">Computer</label>
-                    <p class="compScore">0</p>
+                    <p id="compScore">0</p>
                 </div>
                 <div class="player">
                     <label for="playerScore">Player</label>
-                    <p class="playerScore">0</p>
+                    <p id="playerScore">0</p>
                 </div>
             </div>
             <p id="finalResult">finalResult</p>
@@ -70,7 +70,7 @@
     </div>
 
     <!-- Buttons  ---------------------------------------------- -->
-    <div id="buttons">
+    <div id="buttons" >
         <input type="submit" value="Rock" id="rockBtn" class="btn">
         <input type="submit" value="Paper" id="paperBtn" class="btn">
         <input type="submit" value="Scissor" id="scissorBtn" class="btn">
