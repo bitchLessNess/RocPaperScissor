@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,20 +16,21 @@
         <h1>Rock Paper Sci...</h1>
         <ul>
             <a href="/">
-                <li>Home</li>
+                <li>HOME</li>
             </a>
             <a href="/about.html">
-                <li>About</li>
+                <li>ABOUT</li>
             </a>
             <a href="/form.html">
-                <li>Form</li>
+                <li>FEEDBACK</li>
             </a>
         </ul>
     </nav>
 
 
     <div class="container">
-        <main id="main" >
+       <div class="innerContainer">
+         <main id="main" >
             <div class="playerOne">
                 <img src="rock.png" alt="rock" id="image1" class="player2Choice  hidden">
                 <br>
@@ -65,15 +69,16 @@
                 </div>
             </div>
             <p id="finalResult">finalResult</p>
-            <input type="submit" value="Play Again" id="playAgain">
+            <input type="submit" value="PLAY AGAIN" id="playAgain" class="btnText">
         </div>
+       </div>
     </div>
 
     <!-- Buttons  ---------------------------------------------- -->
     <div id="buttons" >
-        <input type="submit" value="Rock" id="rockBtn" class="btn">
-        <input type="submit" value="Paper" id="paperBtn" class="btn">
-        <input type="submit" value="Scissor" id="scissorBtn" class="btn">
+        <input type="submit" value="ROCK" id="rockBtn" class="btn btnText ">
+        <input type="submit" value="PAPER" id="paperBtn" class="btn btnText">
+        <input type="submit" value="SCISSOR" id="scissorBtn" class="btn btnText">
     </div>
 
 

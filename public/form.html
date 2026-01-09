@@ -13,21 +13,50 @@
         <h1>Rock Paper Sci...</h1>
         <ul>
             <a href="/">
-                <li>home</li>
+                <li>HOME</li>
             </a>
             <a href="/about.html">
-                <li>About</li>
+                <li>ABOUT</li>
             </a>
             <a href="/form.html">
-                <li>Form</li>
+                <li>FEEDBACK</li>
             </a>
         </ul>
     </nav>
 
 
-    <P>
-        this is the form
-    </P>
+   <div class="container">
+    <div class="formContainer">
+        <h2>Feedback Form</h2>
+        <form action="">
+            <div class="details">
+                <div class="spec">
+                    <span for="name" class="user-details">Name</span>
+                    <input type="text" name="name" id="name" class="input" placeholder="Enter your Name">
+                </div>
+                <div class="spec">
+                    <span for="emial" class="user-details">Email</span>
+                    <input type="email"  id="emial" class="input" placeholder="Enter your E-mail">
+                </div>
+                <div class="spec">
+                    <span for="" class="user-details">Number</span>
+                    <input type="number"  id="Number" class="input" placeholder="Enter your Mobile Number">
+                </div>
+                <div class="spec">
+                    <span for="" class="user-details">Relation</span>
+                    <input type="text" id="relation" class="input" placeholder="How Do I Know You">
+                </div>
+                <div class="spec">
+    
+                    <textarea name="" id="feedback" class="input" placeholder="Your thoughts about the project"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="SUBMIT" id="formSubmit" class="btnText">
+        </form>
+    </div>
+   </div>
+   <script src="form.js"></script>
 </body>
 
 </html>
